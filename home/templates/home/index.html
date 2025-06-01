@@ -1,308 +1,274 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gislaine Teles | Engenharia e Diagnóstico</title>
-    {% load static %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <!-- Cabeçalho -->
-    <header class="bg-primary text-white py-4">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h1 class="mb-0">Gislaine Teles</h1>
-                    <p class="lead mb-0">Engenharia e Diagnóstico Técnico</p>
-                </div>
-                <div class="col-md-6 text-md-end mt-3 mt-md-0">
-                    <nav>
-                        <ul class="nav justify-content-md-end">
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="{% url 'home:home' %}">Início</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#servicos">Serviços</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#sobre">Sobre</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#portfolio">Portfólio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="{% url 'contato:contato' %}">Contato</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Vistorias Técnicas Especializadas - Eng. Gislaine Teles</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
 
-    <!-- Banner Principal -->
-    <section class="hero-section py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="display-4 fw-bold">Soluções em Engenharia e Diagnóstico Técnico</h2>
-                    <p class="lead my-4">Especialista em vistorias de entrega de chaves, vistorias para síndico e laudos técnicos com mais de 5 anos de experiência.</p>
-                    <div class="d-flex gap-3">
-                        <a href="{% url 'contato:contato' %}" class="btn btn-primary btn-lg">Solicitar Orçamento</a>
-                        <a href="#servicos" class="btn btn-outline-secondary btn-lg">Conheça Nossos Serviços</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <img src="{% static 'img/banner-engenharia.jpg' %}" alt="Serviços de Engenharia" class="img-fluid rounded shadow">
-                </div>
-            </div>
-        </div>
-    </section>
+			<!-- Header -->
+			<header id="header" class="alt">
+				<a style="text-decoration: none; border: none;" href="{% url 'home:home' %}"><img style="width: 10%; min-width: 80px;" src="{% static 'img/logo-placeholder.png' %}" alt="Logo" /></a>
+				<nav id="nav">
+					<ul>
+						<li><a href="{% url 'home:home' %}">Início</a></li>
+						<li><a href="{% url 'contato:contato' %}" class="button primary cta-header">Agende sua vistoria</a></li>
+					</ul>
+				</nav>
+			</header>
 
-    <!-- Serviços -->
-    <section id="servicos" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Nossos Serviços</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
-                                <i class="fas fa-home fa-2x p-3"></i>
-                            </div>
-                            <h3 class="card-title">Vistoria de Entrega de Chaves</h3>
-                            <p class="card-text">Avaliação detalhada do seu imóvel antes do recebimento, identificando possíveis problemas construtivos e garantindo seus direitos.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
-                                <i class="fas fa-building fa-2x p-3"></i>
-                            </div>
-                            <h3 class="card-title">Vistorias para Síndico</h3>
-                            <p class="card-text">Inspeção completa de áreas comuns e estruturas de condomínios, identificando problemas e sugerindo soluções preventivas e corretivas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3">
-                                <i class="fas fa-file-alt fa-2x p-3"></i>
-                            </div>
-                            <h3 class="card-title">Laudos Técnicos</h3>
-                            <p class="card-text">Documentação técnica detalhada para identificação de patologias, avaliação de estruturas e suporte em processos judiciais ou administrativos.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+			<!-- Banner / Hero Section -->
+			<section id="banner" class="hero-section">
+				<div class="hero-content">
+					<h1>Proteja seu investimento com vistorias técnicas especializadas</h1>
+					<p>Evite prejuízos na entrega do seu imóvel e garanta a segurança do seu condomínio com laudos técnicos profissionais</p>
+					<ul class="actions special">
+						<li><a href="{% url 'contato:contato' %}" class="button primary large">Agende sua vistoria agora</a></li>
+					</ul>
+				</div>
+			</section>
 
-    <!-- Sobre -->
-    <section id="sobre" class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img src="{% static 'img/engenheira-perfil.jpg' %}" alt="Engenheira Gislaine Teles" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-lg-7">
-                    <h2 class="mb-4">Sobre Gislaine Teles</h2>
-                    <p class="lead">Engenheira Civil com pós-graduação em Diagnóstico e mais de 5 anos de experiência no mercado.</p>
-                    <p>Especializada em vistorias técnicas e laudos, com foco em identificação de patologias construtivas e soluções eficientes para problemas estruturais. Atuo com comprometimento e excelência técnica, oferecendo relatórios detalhados e orientações precisas para cada cliente.</p>
-                    <p>Minha missão é garantir segurança e tranquilidade aos clientes através de avaliações técnicas confiáveis e soluções personalizadas para cada situação.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="{% url 'contato:contato' %}" class="btn btn-primary">Entre em Contato</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+			<!-- Main -->
+			<section id="main" class="container">
 
-    <!-- Vídeo Institucional -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Conheça Nosso Trabalho</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="ratio ratio-16x9 shadow rounded">
-                        <video controls poster="{% static 'img/video-poster.jpg' %}">
-                            <source src="{% static 'video/video-institucional.mp4' %}" type="video/mp4">
-                            Seu navegador não suporta vídeos HTML5.
-                        </video>
-                    </div>
-                    <p class="text-center mt-3 text-muted">Veja como trabalhamos e os resultados que entregamos aos nossos clientes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+				<section class="box special">
+					<header class="major">
+						<h2>Vistorias Técnicas Especializadas para sua Segurança e Tranquilidade</h2>
+						<p>Identificamos problemas que passam despercebidos aos olhos leigos, garantindo seus direitos e evitando dores de cabeça futuras</p>
+					</header>
+					
+					<div class="benefits-bar">
+						<div class="benefit-item">
+							<i class="fas fa-check-circle"></i>
+							<span>+5 anos de experiência</span>
+						</div>
+						<div class="benefit-item">
+							<i class="fas fa-home"></i>
+							<span>+1000 imóveis vistoriados</span>
+						</div>
+						<div class="benefit-item">
+							<i class="fas fa-file-alt"></i>
+							<span>Laudos técnicos detalhados</span>
+						</div>
+						<div class="benefit-item">
+							<i class="fas fa-award"></i>
+							<span>Engenheira especializada</span>
+						</div>
+					</div>
+				</section>
 
-    <!-- Portfólio de Fotos -->
-    <section id="portfolio" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Portfólio de Projetos</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <img src="{% static 'img/projeto-1.jpg' %}" class="card-img-top" alt="Projeto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Vistoria em Edifício Residencial</h5>
-                            <p class="card-text">Avaliação completa de estrutura e instalações em condomínio de alto padrão.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <img src="{% static 'img/projeto-2.jpg' %}" class="card-img-top" alt="Projeto 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Laudo Técnico Estrutural</h5>
-                            <p class="card-text">Análise de patologias em estrutura de concreto com recomendações de intervenção.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <img src="{% static 'img/projeto-3.jpg' %}" class="card-img-top" alt="Projeto 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Vistoria de Entrega de Apartamento</h5>
-                            <p class="card-text">Inspeção detalhada em unidade residencial antes do recebimento pelo proprietário.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+				<!-- Video Showcase Section -->
+				<section class="box special video-showcase">
+					<header>
+						<h3>Conheça Nosso Trabalho</h3>
+						<p>Assista ao vídeo e entenda como realizamos nossas vistorias técnicas</p>
+					</header>
+					<div class="video-container">
+						<video controls poster="{% static 'img/video-poster.jpg' %}">
+							<source src="{% static 'video/video-institucional.mp4' %}" type="video/mp4">
+							Seu navegador não suporta vídeos HTML5.
+						</video>
+					</div>
+				</section>
 
-    <!-- Depoimentos -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">O Que Dizem Nossos Clientes</h2>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex mb-3">
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                            </div>
-                            <p class="card-text">"A vistoria realizada pela engenheira Gislaine foi fundamental para identificarmos problemas que passariam despercebidos. Profissional extremamente detalhista e competente."</p>
-                            <div class="d-flex align-items-center mt-3">
-                                <div class="ms-3">
-                                    <h6 class="mb-0">Carlos Silva</h6>
-                                    <small class="text-muted">Proprietário de Apartamento</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex mb-3">
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                            </div>
-                            <p class="card-text">"Como síndica, precisava de um laudo técnico confiável para embasar decisões importantes no condomínio. O trabalho da Gislaine foi impecável e nos deu segurança para agir."</p>
-                            <div class="d-flex align-items-center mt-3">
-                                <div class="ms-3">
-                                    <h6 class="mb-0">Márcia Oliveira</h6>
-                                    <small class="text-muted">Síndica de Condomínio</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="d-flex mb-3">
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                            </div>
-                            <p class="card-text">"Contratei a engenheira para uma vistoria de entrega de chaves e consegui resolver todos os problemas com a construtora graças ao laudo detalhado que ela produziu. Recomendo!"</p>
-                            <div class="d-flex align-items-center mt-3">
-                                <div class="ms-3">
-                                    <h6 class="mb-0">Paulo Mendes</h6>
-                                    <small class="text-muted">Cliente Residencial</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+				<section class="box special features">
+					<div class="features-row">
+						<section class="service-card">
+							<div class="service-icon">
+								<i class="fas fa-key"></i>
+							</div>
+							<h3>Vistoria de Entrega de Chaves</h3>
+							<p><strong>Não receba seu imóvel com problemas!</strong> Nossa vistoria técnica identifica falhas construtivas, acabamentos inadequados, instalações defeituosas e divergências do projeto antes que você assine o termo de recebimento.</p>
+							<ul class="service-list">
+								<li><i class="fas fa-check"></i> Verificação completa de acabamentos</li>
+								<li><i class="fas fa-check"></i> Teste de instalações elétricas e hidráulicas</li>
+								<li><i class="fas fa-check"></i> Análise de esquadrias e vedações</li>
+								<li><i class="fas fa-check"></i> Documentação fotográfica detalhada</li>
+								<li><i class="fas fa-check"></i> Relatório técnico para construtora</li>
+								<li><i class="fas fa-check"></i> Relatório técnico com validade jurídica</li>
+							</ul>
+							<a href="{% url 'contato:contato' %}" class="button alt">Solicitar orçamento</a>
+						</section>
+						<section class="service-card">
+							<div class="service-icon">
+								<i class="fas fa-building"></i>
+							</div>
+							<h3>Vistoria para Síndicos</h3>
+							<p><strong>Proteja seu condomínio e os moradores!</strong> Nossas vistorias técnicas para áreas comuns identificam problemas estruturais, infiltrações e falhas que podem comprometer a segurança e valorização do patrimônio.</p>
+							<ul class="service-list">
+								<li><i class="fas fa-check"></i> Inspeção de áreas comuns</li>
+								<li><i class="fas fa-check"></i> Identificação de patologias construtivas</li>
+								<li><i class="fas fa-check"></i> Verificação de sistemas prediais</li>
+								<li><i class="fas fa-check"></i> Orientação para manutenções preventivas</li>
+								<li><i class="fas fa-check"></i> Suporte técnico para assembleias</li>
+								<li><i class="fas fa-check"></i> Fiscalização de reformas em apartamentos</li>
+							</ul>
+							<a href="{% url 'contato:contato' %}" class="button alt">Solicitar orçamento</a>
+						</section>
+					</div>
+					<div class="features-row">
+						<section class="service-card">
+							<div class="service-icon">
+								<i class="fas fa-file-signature"></i>
+							</div>
+							<h3>Laudos Técnicos Especializados</h3>
+							<p><strong>Documentação técnica com respaldo legal!</strong> Elaboramos laudos técnicos detalhados para diversas finalidades, com ART (Anotação de Responsabilidade Técnica) e toda a documentação necessária.</p>
+							<ul class="service-list">
+								<li><i class="fas fa-check"></i> Laudos de inspeção predial</li>
+								<li><i class="fas fa-check"></i> Laudos de infiltração e umidade</li>
+								<li><i class="fas fa-check"></i> Laudos para ações judiciais</li>
+								<li><i class="fas fa-check"></i> Laudos para seguradoras</li>
+								<li><i class="fas fa-check"></i> Projetos estruturais corretivos</li>
+							</ul>
+							<a href="{% url 'contato:contato' %}" class="button alt">Solicitar orçamento</a>
+						</section>
+						<section class="service-card cta-card">
+							<div class="cta-content">
+								<h3>Não deixe para depois!</h3>
+								<p>Problemas construtivos identificados tardiamente podem gerar custos muito maiores. Agende sua vistoria hoje mesmo e garanta tranquilidade e economia.</p>
+								<a href="{% url 'contato:contato' %}" class="button primary large">Agendar vistoria</a>
+							</div>
+						</section>
+					</div>
+				</section>
 
-    <!-- CTA -->
-    <section class="py-5 bg-primary text-white">
-        <div class="container text-center">
-            <h2 class="mb-4">Pronto para garantir a segurança e qualidade do seu imóvel?</h2>
-            <p class="lead mb-4">Entre em contato agora mesmo e solicite um orçamento sem compromisso.</p>
-            <a href="{% url 'contato:contato' %}" class="btn btn-light btn-lg">Solicitar Orçamento</a>
-        </div>
-    </section>
+				<!-- Image Gallery Section -->
+				<section class="box special">
+					<header>
+						<h3>Galeria de Projetos</h3>
+						<p>Confira alguns dos nossos trabalhos recentes</p>
+					</header>
+					<div class="image-gallery">
+						<div class="gallery-row">
+							<div class="gallery-item">
+								<img src="{% static 'img/projeto-1.jpg' %}" alt="Vistoria de apartamento" />
+								<div class="gallery-caption">Vistoria de entrega de chaves - Residencial Vila Nova</div>
+							</div>
+							<div class="gallery-item">
+								<img src="{% static 'img/projeto-2.jpg' %}" alt="Laudo técnico" />
+								<div class="gallery-caption">Laudo técnico para infiltração - Condomínio Parque das Flores</div>
+							</div>
+						</div>
+						<div class="gallery-row">
+							<div class="gallery-item">
+								<img src="{% static 'img/projeto-3.jpg' %}" alt="Vistoria de condomínio" />
+								<div class="gallery-caption">Vistoria para síndico - Edifício Costa Azul</div>
+							</div>
+							<div class="gallery-item">
+								<img src="{% static 'img/banner-engenharia.jpg' %}" alt="Análise estrutural" />
+								<div class="gallery-caption">Análise estrutural - Residencial Jardim das Palmeiras</div>
+							</div>
+						</div>
+					</div>
+				</section>
 
-    <!-- Rodapé -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>Gislaine Teles</h5>
-                    <p>Engenharia e Diagnóstico Técnico</p>
-                    <p><i class="fas fa-envelope me-2"></i> gislaine.teles.eng@gmail.com</p>
-                    <p><i class="fas fa-phone me-2"></i> (XX) XXXXX-XXXX</p>
-                </div>
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>Links Rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="{% url 'home:home' %}" class="text-white">Início</a></li>
-                        <li><a href="#servicos" class="text-white">Serviços</a></li>
-                        <li><a href="#sobre" class="text-white">Sobre</a></li>
-                        <li><a href="#portfolio" class="text-white">Portfólio</a></li>
-                        <li><a href="{% url 'contato:contato' %}" class="text-white">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Horário de Atendimento</h5>
-                    <p>Segunda a Sexta: 8h às 18h</p>
-                    <p>Sábado: 9h às 13h</p>
-                    <div class="mt-3">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-4">
-            <div class="text-center">
-                <p class="mb-0">&copy; {% now "Y" %} Gislaine Teles Engenharia. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
+				<!-- Testimonials Section -->
+				<section class="box special">
+					<header>
+						<h3>O que nossos clientes dizem</h3>
+					</header>
+					<div class="testimonials">
+						<div class="testimonial">
+							<div class="testimonial-content">
+								<p>"A vistoria na entrega do meu apartamento identificou mais de 30 problemas que eu jamais teria percebido. A construtora corrigiu tudo antes da mudança!"</p>
+							</div>
+							<div class="testimonial-author">
+								<p><strong>Maria S.</strong> - Cliente de vistoria de entrega de chaves</p>
+							</div>
+						</div>
+						<div class="testimonial">
+							<div class="testimonial-content">
+								<p>"O laudo técnico da Gislaine fez toda a diferença! Nos ajudou a resolver os problemas estruturais do condomínio e ainda planejar ações preventivas."</p>
+							</div>
+							<div class="testimonial-author">
+								<p><strong>Carlos M.</strong> - Síndico de condomínio residencial</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
-    <!-- Botão WhatsApp -->
-    <div class="whatsapp-button">
-        <a href="https://wa.me/5500000000000" target="_blank" class="btn btn-success rounded-circle">
-            <i class="fab fa-whatsapp fa-2x"></i>
-        </a>
-    </div>
+				<!-- FAQ Section -->
+				<section class="box special">
+					<header>
+						<h3>Perguntas Frequentes</h3>
+					</header>
+					<div class="faq-container">
+						<div class="faq-item">
+							<h4>Por que preciso de uma vistoria na entrega do meu imóvel?</h4>
+							<p>A vistoria técnica identifica problemas construtivos que podem não ser visíveis a olho nu, mas que podem causar transtornos futuros. Após a assinatura do termo de recebimento, a construtora pode se eximir da responsabilidade de corrigir esses problemas.</p>
+						</div>
+						<div class="faq-item">
+							<h4>Quanto tempo dura uma vistoria de entrega de chaves?</h4>
+							<p>Dependendo do tamanho do imóvel, a vistoria pode durar de 2 a 4 horas. É um investimento de tempo que pode economizar meses de dor de cabeça e milhares de reais em reparos.</p>
+						</div>
+						<div class="faq-item">
+							<h4>O que acontece se forem encontrados problemas no imóvel?</h4>
+							<p>Elaboramos um relatório técnico detalhado com todas as não-conformidades encontradas, documentação fotográfica e recomendações. Este documento é entregue à construtora para que os problemas sejam solucionados antes da assinatura do termo de recebimento.</p>
+						</div>
+						<div class="faq-item">
+							<h4>Quais documentos recebo após a vistoria?</h4>
+							<p>Você recebe um laudo técnico completo com registro fotográfico, descrição detalhada dos problemas encontrados, recomendações técnicas e ART (Anotação de Responsabilidade Técnica) que dá respaldo legal ao documento.</p>
+						</div>
+					</div>
+				</section>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{% static 'js/main.js' %}"></script>
-</body>
+				<!-- About Section -->
+				<div class="row box">
+					<div class="col-3 col-12-mobilep">
+						<div>
+							<span class="image"> <img style="width: 100%; height: auto; float: none; border-radius: 50%;" src="{% static 'img/engenheira-perfil.jpg' %}" alt="Engenheira Gislaine Teles"/></span>
+						</div>
+					</div>
+					<div class="col-9 col-12-mobilep">
+						<h3>Sobre a Engenheira</h3>
+						<p>Gislaine Teles é uma engenheira civil pós-graduada em Engenharia Diagnóstica e Documentação Legal, com mais de 5 anos de experiência em vistorias técnicas e laudos especializados.</p>
+						<p>Com expertise em identificação de problemas construtivos em condomínios e residências, já realizou mais de 1000 vistorias técnicas, ajudando proprietários a garantirem seus direitos e síndicos a manterem seus condomínios seguros e valorizados.</p>
+						<ul class="credentials-list">
+							<li><i class="fas fa-graduation-cap"></i> Pós-graduação em Engenharia Diagnóstica</li>
+							<li><i class="fas fa-id-card"></i> CREA nº XXXXX</li>
+							<li><i class="fas fa-certificate"></i> Especialista em vistorias e laudos técnicos</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Final CTA -->
+				<section class="box special cta-final">
+					<h3>Proteja seu investimento com uma vistoria profissional</h3>
+					<p>Não deixe para depois! Problemas construtivos identificados tardiamente podem gerar custos muito maiores.</p>
+					<ul class="actions special">
+						<li><a href="{% url 'contato:contato' %}" class="button primary large">Agendar vistoria agora</a></li>
+					</ul>
+				</section>
+
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+                <ul class="icons">
+                    <h3>Redes sociais</h3>
+                    <li><a href="https://www.instagram.com/eng.gislaineteles" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/gislaine-teles-/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; Gislaine Teles Eng. Civil. Todos os direitos reservados.</li>
+                    <li>CREA nº XXXXX</li>
+                </ul>
+            </footer>
+
+			<!-- Logo Floating Button -->
+            <a href="https://wa.me/5511900000000/?text=Olá, gostaria de saber mais informações sobre seus serviços." class="logo-float">
+                <i class="fab fa-whatsapp fa-2x" style="color: white;"></i>
+            </a>
+
+		</div>
+		<!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+	</body>
 </html>
